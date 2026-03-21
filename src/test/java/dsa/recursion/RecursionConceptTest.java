@@ -1,5 +1,4 @@
-package dsa;
-import dsa.recursion.RecursionConcept;
+package dsa.recursion;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

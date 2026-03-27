@@ -95,8 +95,8 @@ public class UserAccount {
          */
         public Builder(String username, String email, String password){
             this.username = username.trim();
-            this.email = email.trim();
-            this.password = password.trim();
+            this.email =  (email == null) ? null : email.trim();
+            this.password =  (password == null) ? null : password.trim();
         }
 
         /**

@@ -31,7 +31,13 @@ public class LinkListCustom {
         size = 0;
     }
 
-    
+    public LinkListCustom(int[] array){
+        for(int value:array){
+            insertBack(value);
+        }
+    }
+
+
     // Get LinkedList size
     public int getSize(){
         return this.size;
@@ -39,7 +45,7 @@ public class LinkListCustom {
 
 
     // Insert Front
-    public void addFront(int value){
+    public void insertFront(int value){
 
         Node node = new Node(value);
 
@@ -55,7 +61,21 @@ public class LinkListCustom {
         size++;
     }
 
+
     // Insert Last
+    public void insertBack(int value){
+        Node node = new Node(value);
+
+        if(head == null){
+            insertFront(value);
+            return;
+        }
+
+        tail.next = node;
+        size++;
+        tail = tail.next;
+
+    }
     // Insert at Nth position
     // Delete Front
     // Delete Last
@@ -76,6 +96,21 @@ public class LinkListCustom {
         }
 
         System.out.println("END");
+    }
+
+
+    // head tail difference
+    public int headTailDifference(){
+
+        if(head == null){
+            return -1;
+        }
+
+        if(head.value > tail.value){
+            return  head.value - tail.value;
+        }else {
+            return tail.value - head.value;
+        }
     }
 
 }

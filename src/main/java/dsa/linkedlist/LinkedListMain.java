@@ -30,6 +30,7 @@ public class LinkedListMain {
 
         System.out.println("Linklist 4");
         LinkListCustom linklist4 = new LinkListCustom(list);
+        linklist4.insert(80,9);
         linklist4.display();
         System.out.println("Difference between head and tail node. " + linklist4.headTailDifference());
 

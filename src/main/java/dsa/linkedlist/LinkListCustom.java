@@ -76,7 +76,42 @@ public class LinkListCustom {
         tail = tail.next;
 
     }
+
     // Insert at Nth position
+    public void insert(int value, int position){
+
+        if(head == null){
+            insertBack(value);
+            return;
+        }
+
+        if(position == 0){
+            insertFront(value);
+            return;
+        }
+
+        if(position == size){
+            insertBack(value);
+            return;
+        }
+
+        if(position < 0 || position > size){
+            return;
+        }
+
+        Node temp = head;
+        for(int index = 0; index < position-2; index++){
+            temp = temp.next;
+        }
+
+        Node node = new Node(value);
+
+        node.next = temp.next;
+        temp.next = node;
+        size++;
+
+    }
+
     // Delete Front
     // Delete Last
     // Delete Nth position
@@ -108,7 +143,7 @@ public class LinkListCustom {
 
         if(head.value > tail.value){
             return  head.value - tail.value;
-        }else {
+        } else {
             return tail.value - head.value;
         }
     }

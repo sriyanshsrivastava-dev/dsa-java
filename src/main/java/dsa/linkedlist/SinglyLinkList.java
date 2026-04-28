@@ -1,6 +1,6 @@
 package dsa.linkedlist;
 
-public class LinkListCustom {
+public class SinglyLinkList {
 
     // Variables and internal Classes
 
@@ -27,11 +27,11 @@ public class LinkListCustom {
 
     // Constructors
 
-    public LinkListCustom(){
+    public SinglyLinkList(){
         size = 0;
     }
 
-    public LinkListCustom(int[] array){
+    public SinglyLinkList(int[] array){
         for(int value:array){
             insertBack(value);
         }

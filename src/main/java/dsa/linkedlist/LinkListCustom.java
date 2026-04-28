@@ -77,30 +77,31 @@ public class LinkListCustom {
 
     }
 
-    // Insert at Nth position
-    public void insert(int value, int position){
+    // Insert at Nth Index
+    public void insertAtIndex(int value, int index){
+
+        if(index < 0 || index > size){
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+        }
 
         if(head == null){
             insertBack(value);
             return;
         }
 
-        if(position == 0){
+        if(index == 0){
             insertFront(value);
             return;
         }
 
-        if(position == size){
+        if(index == size){
             insertBack(value);
             return;
         }
 
-        if(position < 0 || position > size){
-            return;
-        }
-
         Node temp = head;
-        for(int index = 0; index < position-2; index++){
+
+        for(int i = 0; i < index-1; i++){
             temp = temp.next;
         }
 
@@ -112,8 +113,71 @@ public class LinkListCustom {
 
     }
 
+    // Find
+    public int find(int value){
+        Node temp = head;
+
+        for(int index = 0; index < this.size; index++){
+            if(temp.value==value){
+                return index;
+            }
+            temp = temp.next;
+        }
+        return -1;
+    }
+
+    // GetNodeAtIndex
+    private Node getNodeAtIndex(int index){
+        if(index < 0 || index >= size){
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+        }
+
+        if (index == 0){
+            return head;
+        }
+
+        Node temp = head;
+
+        for(int i = 0; i < index; i++){
+            temp = temp.next;
+        }
+
+        return temp;
+    }
+
+    // getByIndex
+    public int getByIndex(int index){
+        return this.getNodeAtIndex(index).value;
+    }
+
     // Delete Front
+    public void deleteFront(){
+        if(head == null){
+            System.out.println("Empty List");
+            return;
+        }
+
+        head = head.next;
+        size--;
+    }
+
     // Delete Last
+    public void deleteBack(){
+        if(head == null){
+            System.out.println("Empty List");
+        }
+        if(head == tail){
+            deleteFront();
+        }
+
+        Node temp = head;
+        while(temp.next != tail){
+            temp = temp.next;
+        }
+        temp.next = null;
+        tail = temp;
+        size--;
+    }
     // Delete Nth position
     // Print Linklist
     public void display(){

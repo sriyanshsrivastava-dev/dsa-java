@@ -178,7 +178,27 @@ public class LinkListCustom {
         tail = temp;
         size--;
     }
-    // Delete Nth position
+
+
+    // Delete at Nth Index
+    public void deleteAtIndex(int index){
+
+        if(index < 0 || index >= size){
+            throw new IndexOutOfBoundsException();
+        }
+
+        if(index == 0){
+            head = head.next;
+            size--;
+            return;
+        }
+
+        Node prevNode = getNodeAtIndex(index-1);
+        prevNode.next = prevNode.next.next;
+        size--;
+    }
+
+
     // Print Linklist
     public void display(){
 

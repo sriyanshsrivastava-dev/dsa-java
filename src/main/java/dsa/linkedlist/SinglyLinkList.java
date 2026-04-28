@@ -84,11 +84,6 @@ public class SinglyLinkList {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }
 
-        if(head == null){
-            insertBack(value);
-            return;
-        }
-
         if(index == 0){
             insertFront(value);
             return;
@@ -159,21 +154,30 @@ public class SinglyLinkList {
 
         head = head.next;
         size--;
+
+        if(head == null){
+            tail = null;
+        }
     }
 
     // Delete Last
     public void deleteBack(){
+
         if(head == null){
             System.out.println("Empty List");
+            return;
         }
+
         if(head == tail){
             deleteFront();
+            return;
         }
 
         Node temp = head;
         while(temp.next != tail){
             temp = temp.next;
         }
+
         temp.next = null;
         tail = temp;
         size--;

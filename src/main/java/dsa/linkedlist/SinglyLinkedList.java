@@ -8,6 +8,16 @@ public class SinglyLinkedList {
     private Node tail;  // we track tail to make linklist of O(1).
     private int size;
 
+    // head and tail accessor
+
+    public int getHead(){
+        return head.value;
+    }
+
+    public int getTail(){
+        return tail.value;
+    }
+
 
     private class Node{
 
@@ -200,10 +210,19 @@ public class SinglyLinkedList {
         if(index == 0){
             head = head.next;
             size--;
+
+            if(head == null){
+                tail = null;
+            }
+
             return;
         }
 
         Node prevNode = getNodeAtIndex(index-1);
+
+        if(index == size - 1){
+            tail = prevNode;
+        }
         prevNode.next = prevNode.next.next;
         size--;
     }

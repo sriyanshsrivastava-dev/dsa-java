@@ -1,6 +1,6 @@
 package dsa.linkedlist;
 
-public class SinglyLinkList {
+public class SinglyLinkedList {
 
     // Variables and internal Classes
 
@@ -27,11 +27,12 @@ public class SinglyLinkList {
 
     // Constructors
 
-    public SinglyLinkList(){
+    public SinglyLinkedList(){
         size = 0;
     }
 
-    public SinglyLinkList(int[] array){
+
+    public SinglyLinkedList(int[] array){
         for(int value:array){
             insertBack(value);
         }
@@ -77,6 +78,7 @@ public class SinglyLinkList {
 
     }
 
+
     // Insert at Nth Index
     public void insertAtIndex(int value, int index){
 
@@ -108,6 +110,7 @@ public class SinglyLinkList {
 
     }
 
+
     // Find
     public int find(int value){
         Node temp = head;
@@ -120,6 +123,7 @@ public class SinglyLinkList {
         }
         return -1;
     }
+
 
     // GetNodeAtIndex
     private Node getNodeAtIndex(int index){
@@ -140,6 +144,7 @@ public class SinglyLinkList {
         return temp;
     }
 
+
     // getByIndex
     public int getByIndex(int index){
         return this.getNodeAtIndex(index).value;
@@ -159,6 +164,7 @@ public class SinglyLinkList {
             tail = null;
         }
     }
+
 
     // Delete Last
     public void deleteBack(){

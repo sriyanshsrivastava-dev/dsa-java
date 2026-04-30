@@ -101,6 +101,63 @@ public class DoublyLinkedList {
         size++;
     }
 
+    private Node getNodeAt(int index){
+
+        if(index < 0 || index > size){
+            throw new IndexOutOfBoundsException("Index out of bounds: " + "index: " + index + ", size: " + size );
+        }
+
+        Node current;
+
+        if (index < size / 2) {
+            current = head;
+            for (int i = 0; i < index; i++) {
+                current = current.next;
+            }
+        } else {
+            current = tail;
+            for (int i = size - 1; i > index; i--) {
+                current = current.prev;
+            }
+        }
+
+        return current;
+    }
+
+    // Insert at any Index
+    public void insertAtIndex(int value, int index){
+
+        if(index == 0){
+            insertFront(value);
+            return;
+        }
+
+        if (index == size){
+            insertBack(value);
+            return;
+        }
+
+        Node nextNode = getNodeAt(index);
+        Node prevNode = nextNode.prev;
+
+        Node newNode = new Node(value);
+
+        prevNode.next = newNode;
+        newNode.prev = prevNode;
+
+        newNode.next = nextNode;
+        nextNode.prev = newNode;
+
+        size++;
+    }
+
+
+    // get value at index
+    public int getAtIndex(int index){
+        return getNodeAt(index).value;
+    }
+
+
     // display the linklist
     public void display(){
 

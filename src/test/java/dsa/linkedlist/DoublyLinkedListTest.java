@@ -2,8 +2,7 @@ package dsa.linkedlist;
 
 import org.junit.jupiter.api.Test;
 import java.util.NoSuchElementException;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class DoublyLinkedListTest {
@@ -12,7 +11,7 @@ public class DoublyLinkedListTest {
     @Test
     void testEmptyDoublyLinkedList() {
         DoublyLinkedList list = new DoublyLinkedList();
-        assertEquals(true, list.isEmpty());
+        assertTrue(list.isEmpty());
     }
 
     @Test
@@ -52,5 +51,21 @@ public class DoublyLinkedListTest {
         assertEquals(10, list.getTail());
         assertEquals(5, list.getHead());
 
+    }
+
+    @Test
+    void testInsertAtIndex(){
+        DoublyLinkedList list = new DoublyLinkedList();
+        list.insertAtIndex(5,0);
+        list.insertBack(15);
+        list.insertBack(100);
+        list.insertAtIndex(25,2);
+
+        assertEquals(4, list.getSize());
+        assertEquals(5, list.getAtIndex(0));
+        assertEquals(15, list.getAtIndex(1));
+        assertEquals(25, list.getAtIndex(2));
+
+        assertThrows(IndexOutOfBoundsException.class, () -> list.insertAtIndex(5,10));
     }
 }

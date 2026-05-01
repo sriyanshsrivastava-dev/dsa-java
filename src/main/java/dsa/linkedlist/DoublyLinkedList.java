@@ -182,6 +182,65 @@ public class DoublyLinkedList {
         return -1;
     }
 
+    public void deleteFront(){
+
+        if (isEmpty()){
+            throw new NoSuchElementException("Linked list is null.");
+        }
+
+        if(head == tail){
+            head = null;
+            tail = null;
+            size--;
+            return;
+        }
+
+        head = head.next;
+        head.prev = null;
+        size--;
+    }
+
+    public void deleteBack(){
+
+        if (isEmpty()){
+            throw new NoSuchElementException("Linked list is null.");
+        }
+
+        if(head == tail){
+            head = null;
+            tail = null;
+        } else{
+            tail = tail.prev;
+            tail.next = null;
+        }
+
+        size--;
+    }
+
+    public void deleteAtIndex(int index){
+        if(isEmpty()){
+            throw new NoSuchElementException("Linked list is null.");
+        }
+
+        if(index ==0){
+            deleteFront();
+            return;
+        }
+
+        if(index == size-1){
+            deleteBack();
+            return;
+        }
+
+        Node current =  getNodeAt(index);
+
+        Node prev = current.prev;
+        prev.next = prev.next.next;
+        prev.next.prev = prev;
+        size--;
+
+    }
+
 
 
     // display the linklist

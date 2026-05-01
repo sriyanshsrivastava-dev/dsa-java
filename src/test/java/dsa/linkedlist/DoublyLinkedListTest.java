@@ -92,4 +92,52 @@ public class DoublyLinkedListTest {
 
         assertEquals(2, list.find(5));
     }
+
+    @Test
+    void testDeleteFirstInEmptyList(){
+        DoublyLinkedList list = new DoublyLinkedList();
+        assertThrows(NoSuchElementException.class, list::deleteFront);
+    }
+
+    @Test
+    void testDeleteFirstInSingleNodeList() {
+        DoublyLinkedList list = new DoublyLinkedList();
+        list.insertFront(5);
+        list.deleteFront();
+
+        assertTrue(list.isEmpty());
+        assertThrows(NoSuchElementException.class, list::getHead);
+        assertThrows(NoSuchElementException.class, list::getTail);
+    }
+
+    @Test
+    void testDeleteBack(){
+        DoublyLinkedList list = new DoublyLinkedList();
+        list.insertFront(5);
+        list.deleteBack();
+        assertThrows(NoSuchElementException.class, list::getHead);
+
+        list.insertBack(10);
+        list.insertBack(100);
+        list.insertBack(25);
+        list.deleteBack();
+        assertEquals(2, list.getSize());
+        assertEquals(100, list.getTail());
+    }
+
+
+    @Test
+    void testDeleteAtIndex(){
+        DoublyLinkedList list = new DoublyLinkedList();
+        assertTrue(list.isEmpty());
+        list.insertBack(5);
+        list.insertBack(10);
+        list.insertBack(50);
+
+        list.deleteAtIndex(2);
+
+        assertEquals(2, list.getSize());
+        assertEquals(10, list.getTail());
+        assertThrows(IndexOutOfBoundsException.class, () -> list.deleteAtIndex(5));
+    }
 }

@@ -157,6 +157,32 @@ public class DoublyLinkedList {
         return getNodeAt(index).value;
     }
 
+    // contains value
+    public boolean contains(int value){
+        while (head != null){
+            if (head.value == value){
+                return true;
+            }
+            head = head.next;
+        }
+        return false;
+    }
+
+    // find value
+    public int find(int value){
+
+        Node current = head;
+
+        for(int i = 0; i < size; i++){
+            if (current.value == value){
+                return i;
+            }
+            current = current.next;
+        }
+        return -1;
+    }
+
+
 
     // display the linklist
     public void display(){

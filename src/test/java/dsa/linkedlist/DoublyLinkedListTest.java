@@ -68,4 +68,28 @@ public class DoublyLinkedListTest {
 
         assertThrows(IndexOutOfBoundsException.class, () -> list.insertAtIndex(5,10));
     }
+
+    @Test
+    void testContains(){
+        DoublyLinkedList list = new DoublyLinkedList();
+        list.insertFront(5);
+        list.insertFront(10);
+        list.insertFront(100);
+
+        assertTrue(list.contains(100));
+        assertFalse(list.contains(20));
+    }
+
+    @Test
+    void testFind(){
+        DoublyLinkedList list = new DoublyLinkedList();
+        list.insertFront(5);
+        list.insertFront(10);
+        list.insertFront(100);
+
+        list.display();
+        System.out.println(list.getSize());
+
+        assertEquals(2, list.find(5));
+    }
 }

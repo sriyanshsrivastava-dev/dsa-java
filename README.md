@@ -212,7 +212,7 @@ All contributions — big or small — are valued.
 
 ---
 
-## Future-Roadmap
+## Future Roadmap
 
 The following topics are planned for future implementation. This list reflects the long-term direction of the project:
 

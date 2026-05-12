@@ -245,9 +245,9 @@ This roadmap will evolve as the project grows. Community suggestions are welcome
 
 ##  A Note on This Repository
 
-This is an **actively maintained and evolving project**. Implementations and documentation may be refined over time as understanding deepens and best practices improve. Some early implementations may be revisited and improved — that's intentional. The goal is long-term quality, not short-term completeness.
+This is an **actively maintained and evolving project**. Implementations and documentation may be refined over time as understanding deepens and best practices improve. Some early implementations may be revisited and improved that's intentional. The goal is long-term quality, not short-term completeness.
 
-If you notice something that could be improved — a clearer explanation, a missing edge case, a better approach — please open an issue or submit a pull request. This project grows best as a collaborative learning effort.
+If you notice something that could be improved a clearer explanation, a missing edge case, a better approach please open an issue or submit a pull request. This project grows best as a collaborative learning effort.
 
 ---
 

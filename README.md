@@ -59,7 +59,7 @@ This repository is built around a simple but important belief: **Deep understand
 
 Here's what that means in practice:
 
-- **Internal logic over surface-level solutions** — Implementations explain *how* and *why* things work, not just *what* they do
+- **Internal logic over surface-level solutions** — Implementations explain how and why things work, not just what they do
 - **Readability is a feature** — Code is written so that a beginner can follow the thought process, not just the output
 - **Comments and documentation** — Meaningful comments are encouraged throughout, not treated as optional extras
 - **Edge cases are taken seriously** — Implementations consider boundary conditions, not just the happy path

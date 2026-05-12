@@ -127,7 +127,7 @@ dsa-java/
   - `Student` — Builder pattern applied to construct a complex student object
   - `UserAccount` — Builder pattern for constructing a user account with optional fields
 
-> More topics are being actively added. See the [Roadmap](#-Future-Roadmap) below.
+> More topics are being actively added. See the [Roadmap](#future-roadmap) below.
 
 ---
 

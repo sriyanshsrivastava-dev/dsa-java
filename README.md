@@ -1,6 +1,6 @@
 #  DSA Java — Structured Learning Repository
 
- **A long-term, educational Java repository for deeply understanding Data Structures, Algorithms, and Software Design Patterns — built with clarity, maintainability, and continuous learning at its core.**
+   **A long-term, educational Java repository for deeply understanding Data Structures, Algorithms, and Software Design Patterns — built with clarity, maintainability, and continuous learning at its core.**
 
 ---
 
@@ -8,9 +8,9 @@
 
 This repository is a structured, educational Java project dedicated to building a thorough understanding of:
 
-- **Data Structures & Algorithms (DSA)** — from foundational concepts to advanced topics
-- **Software Design Patterns** — clean, real-world implementations in Java
-- **Software Engineering Best Practices** — testing, documentation, and maintainable code
+- **Data Structures & Algorithms (DSA)** — From foundational concepts to advanced topics
+- **Software Design Patterns** — Clean, real-world implementations in Java
+- **Software Engineering Best Practices** — Testing, documentation, and maintainable code
 
 It is not a collection of quick-solve snippets. Every implementation here is written with intention — focusing on why things work, not just that they work.
 
@@ -27,15 +27,15 @@ This repository is continuously evolving. New topics, refinements, and improveme
 
 ##  Features
 
--  **Structured DSA Implementations** — organized by topic
--  **Java-First** — all implementations in idiomatic Java 17+
--  **Clean, Readable Code** — written to be understood, not just executed
--  **Maven Project Structure** — industry-standard build and project organization
--  **Unit Testing** — every implementation is validated
--  **Beginner-Friendly Approach** — concepts explained through comments and documentation
--  **Design Pattern Implementations** — real patterns, explained with real examples
--  **Long-Term Maintainability** — modular packages designed to scale cleanly
--  **Open-Source Collaboration** — contributions, improvements, and discussions welcome
+-  **Structured DSA Implementations** — Organized by topic
+-  **Java-First** — All implementations in idiomatic Java 17+
+-  **Clean, Readable Code** — Written to be understood, not just executed
+-  **Maven Project Structure** — Industry-standard build and project organization
+-  **Unit Testing** — Every implementation is validated
+-  **Beginner-Friendly Approach** — Concepts explained through comments and documentation
+-  **Design Pattern Implementations** — Real patterns, explained with real examples
+-  **Long-Term Maintainability** — Modular packages designed to scale cleanly
+-  **Open-Source Collaboration** — Contributions, improvements, and discussions welcome
 
 ---
 
@@ -128,7 +128,7 @@ dsa-java/
   - `Student` — Builder pattern applied to construct a complex student object
   - `UserAccount` — Builder pattern for constructing a user account with optional fields
 
-> More topics are being actively added. See the [Roadmap](#-future-roadmap) below.
+> More topics are being actively added. See the [Roadmap](#-Future-Roadmap) below.
 
 ---
 
@@ -213,7 +213,7 @@ All contributions — big or small — are valued.
 
 ---
 
-##  Future Roadmap
+##Future Roadmap
 
 The following topics are planned for future implementation. This list reflects the long-term direction of the project:
 

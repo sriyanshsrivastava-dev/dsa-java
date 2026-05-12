@@ -1,6 +1,6 @@
 #  DSA Java — Structured Learning Repository
 
-> A long-term, educational Java repository for deeply understanding Data Structures, Algorithms, and Software Design Patterns — built with clarity, maintainability, and continuous learning at its core.
+ **A long-term, educational Java repository for deeply understanding Data Structures, Algorithms, and Software Design Patterns — built with clarity, maintainability, and continuous learning at its core.**
 
 ---
 

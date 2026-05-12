@@ -1,6 +1,6 @@
 #  DSA Java — Structured Learning Repository
 
-   **A long-term, educational Java repository for deeply understanding Data Structures, Algorithms, and Software Design Patterns — built with clarity, maintainability, and continuous learning at its core.**
+   **A long-term, educational Java repository for deeply understanding Data Structures, Algorithms, and Software Design Patterns built with clarity, maintainability, and continuous learning at its core.**
 
 ---
 
@@ -12,7 +12,7 @@ This repository is a structured, educational Java project dedicated to building 
 - **Software Design Patterns** — Clean, real-world implementations in Java
 - **Software Engineering Best Practices** — Testing, documentation, and maintainable code
 
-It is not a collection of quick-solve snippets. Every implementation here is written with intention — focusing on why things work, not just that they work.
+It is not a collection of quick-solve snippets. Every implementation here is written with intention focusing on why things work, not just that they work.
 
 **Who is this for?**
 

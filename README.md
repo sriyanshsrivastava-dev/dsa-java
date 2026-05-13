@@ -27,16 +27,14 @@ This repository is continuously evolving. New topics, refinements, and improveme
 
 ##  Features
 
--  **Structured DSA Implementations** — Organized by topic
--  **Java-First** — All implementations in idiomatic Java 17+
--  **Clean, Readable Code** — Written to be understood, not just executed
--  **Maven Project Structure** — Industry-standard build and project organization
--  **Unit Testing** — Every implementation is validated
--  **Beginner-Friendly Approach** — Concepts explained through comments and documentation
--  **Design Pattern Implementations** — Real patterns, explained with real examples
--  **Long-Term Maintainability** — Modular packages designed to scale cleanly
--  **Open-Source Collaboration** — Contributions, improvements, and discussions welcome
-
+- **Java-First** — All implementations written in clean, standard Java 17+
+- **Readable Code** — Written to be understood, not just executed
+- **Maven Project Structure** — Industry-standard build and project organization
+- **Unit Testing** — Every implementation is validated with tests
+- **Beginner-Friendly Approach** — Concepts explained through comments and documentation
+- **Design Pattern Implementations** — Real patterns, explained with real examples
+- **Long-Term Maintainability** — Modular packages designed to scale cleanly
+- **Open-Source Collaboration** — Contributions, improvements, and discussions are always welcome
 ---
 
 ##  Technologies Used
@@ -80,26 +78,33 @@ dsa-java/
 ├── src/
 │   ├── main/
 │   │   └── java/
-│   │       ├── dsa/                    # Data Structures & Algorithms
-│   │       │   ├── linkedlist/
-│   │       │   ├── stack/
-│   │       │   ├── queue/
-│   │       │   ├── tree/
-│   │       │   └── graph/
+│   │       ├── dsa/                               # Data Structures & Algorithms
+│   │       │   └── linkedlist/                    → Linked List implementations
+│   │       │       ├── DoublyLinkedList.java       → Core doubly linked list logic
+│   │       │       ├── DoublyLinkedListMain.java   → Demo/runner for doubly linked list
+│   │       │       ├── SinglyLinkedList.java       → Core singly linked list logic
+│   │       │       └── SinglyLinkedListMain.java   → Demo/runner for singly linked list
 │   │       │
-│   │       └── designpattern/          # Software Design Patterns
-│   │           ├── builderpattern/
-│   │           ├── strategypattern/
-│   │           └── singletonpattern/
+│   │       └── designpattern/                     # Software Design Patterns
+│   │           └── builderpattern/                → Builder Pattern implementations
+│   │               ├── Student.java               → Builder pattern for a Student object
+│   │               ├── TestClass.java             → Manual test/demo runner
+│   │               └── UserAccount.java           → Builder pattern for a UserAccount object
 │   │
 │   └── test/
 │       └── java/
-│           ├── dsa/                    # Tests for DSA implementations
-│           └── designpattern/          # Tests for Design Pattern implementations
+│           ├── dsa/
+│           │   └── linkedlist/                    → Tests for Linked List implementations
+│           │       ├── DoublyLinkedListTest.java
+│           │       └── SinglyLinkedListTest.java
+│           │
+│           └── designpattern/
+│               └── builderpattern/                → Tests for Builder Pattern implementations
+│                   └── UserAccountTest.java
 │
-├── pom.xml                             # Maven configuration
-├── CONTRIBUTING.md                     # Contribution guidelines
-├── LICENSE                             # License information
+├── pom.xml                                        # Maven configuration
+├── CONTRIBUTING.md                                # Contribution guidelines
+├── LICENSE                                        # License information
 └── README.md
 ```
 
@@ -118,15 +123,16 @@ dsa-java/
 ### Data Structures
 
 - **Linked List**
-  - `SinglyLinkedList` — Linear structure with single directional node linkage
-  - `DoublyLinkedList` — Bidirectional node linkage with head and tail references
+  - `SinglyLinkedList` — A one-way chain: each node points only to the next node 
+  - `DoublyLinkedList` — A two-way chain: each node points to both the next and the previous node
 
 ### Design Patterns
 
 - **Builder Pattern**
-  - `Student` — Builder pattern applied to construct a complex student object
-  - `UserAccount` — Builder pattern for constructing a user account with optional fields
-
+  - The **Builder Pattern** helps you construct complex objects step by step instead of passing ten arguments to a constructor, you build the object piece by piece, only including what you need.
+  
+  - `Student` —  Builder pattern for constructing a Student object — demonstrated via `TestClass.java`
+  - `UserAccount` — Builder pattern for constructing a UserAccount with optional fields — covered by `UserAccountTest.java`
 > More topics are being actively added. See the [Roadmap](#future-roadmap) below.
 
 ---
@@ -136,8 +142,8 @@ dsa-java/
 Every implementation in this repository is paired with a corresponding unit test under `src/test/java`.
 
 Tests serve two purposes here:
-1. **Validation** — ensuring implementations behave correctly across normal and edge-case inputs
-2. **Learning** — tests document expected behavior and serve as living examples of how each structure works
+1. **Validation** — Ensuring implementations behave correctly across normal and edge-case inputs
+2. **Learning** — Tests document expected behavior and serve as living examples of how each structure works
 
 Tests are written using **JUnit 5** and follow the same package structure as the main source, making it easy to locate the test for any given implementation.
 
@@ -153,43 +159,70 @@ mvn test
 
 ### Prerequisites
 
-- Java 17 or higher
-- Maven 3.6 or higher
-- Git
+Before you begin, make sure you have the following installed:
+ 
+- **Java 17 or higher** — The programming language this project is written in
+- **Maven 3.6 or higher** — A build tool that manages dependencies and runs the project
+- **Git** — For cloning the repository to your local machine
+**Not sure if you have them installed?** Run these commands in your terminal:
+ 
+```bash
+java -version
+mvn -version
+git --version
+```
+ 
+If any of these aren't installed, you can download them here:
+- Java: https://adoptium.net
+- Maven: https://maven.apache.org/download.cgi
+- Git: https://git-scm.com/downloads
+---
 
-### Clone the Repository
-
+### Step 1 — Clone the Repository
+ 
+This downloads the project to your computer:
+ 
 ```bash
 git clone https://github.com/sriyanshsrivastava-dev/dsa-java.git
 cd dsa-java
 ```
-
-### Build the Project
-
+ 
+### Step 2 — Build the Project
+ 
+This compiles the code and sets everything up. Maven will automatically download any required dependencies:
+ 
 ```bash
 mvn clean install
 ```
-
-### Run All Tests
-
+ 
+### Step 3 — Run All Tests
+ 
+This runs every unit test in the project to confirm everything is working:
+ 
 ```bash
 mvn test
 ```
-
-### Run a Specific Implementation (Demo/Main Class)
-
-Each data structure or design pattern includes a `*Main.java` or `TestClass.java` for running demonstrations directly.
-
-Example — run the Singly Linked List demo:
-
+ 
+### Step 4 — Run a Specific Demo
+ 
+Each data structure or design pattern includes a `*Main.java` file for running demonstrations directly.
+ 
+**Example — run the Singly Linked List demo:**
+ 
 ```bash
 mvn exec:java "-Dexec.mainClass=dsa.linkedlist.SinglyLinkedListMain" -q
 ```
-
-Example — run the Doubly Linked List demo:
-
+ 
+**Example — run the Doubly Linked List demo:**
+ 
 ```bash
 mvn exec:java "-Dexec.mainClass=dsa.linkedlist.DoublyLinkedListMain" -q
+```
+ 
+**Example — run the Builder Pattern demo:**
+ 
+```bash
+mvn exec:java "-Dexec.mainClass=designpattern.builderpattern.TestClass" -q
 ```
 
 > Replace the class path with the appropriate package and class name for other implementations.
@@ -198,16 +231,19 @@ mvn exec:java "-Dexec.mainClass=dsa.linkedlist.DoublyLinkedListMain" -q
 
 ##  Contributing
 
-Contributions are welcome and encouraged! Whether you're fixing a bug, improving documentation, adding explanations, writing tests, or implementing a new topic — your contributions help make this a better learning resource for everyone.
-
-Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) before submitting a pull request. Key guidelines include:
-
+Contributions are welcome and encouraged — every bit helps make this a better learning resource for everyone.
+ 
+**First time contributing to open source?** That's completely fine! A pull request is simply a way of saying "here's a change I'd like to suggest." GitHub walks you through the process step by step.
+ 
+Whether you're fixing a bug, improving documentation, adding explanations, writing tests, or implementing a new topic — your input matters here.
+ 
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a pull request. Key guidelines include:
+ 
 - Follow the existing Maven project structure
 - Write clean, readable code with meaningful comments
 - Include JUnit tests for every new implementation
 - Use conventional commit messages (`feat:`, `fix:`, `docs:`, etc.)
 - Submit PRs to the `develop` branch, not directly to `main`
-
 All contributions — big or small — are valued.
 
 ---
